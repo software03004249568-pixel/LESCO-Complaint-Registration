@@ -52,12 +52,11 @@ class MainActivity : AppCompatActivity() {
     // Keep the known backend value exactly as used by the existing system.
     // Other common categories are provided for mobile users; they are sent as plain text.
     private val issueTypes = listOf(
+        "Snap Uploading",
         "Level 1 Installation",
-        "Software",
-        "Hardware",
-        "Network",
-        "Printer",
-        "Other"
+        "Level 1 Application",
+        "Mobile Meter Reading",
+        "Others"
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
