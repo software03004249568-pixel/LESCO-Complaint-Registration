@@ -200,10 +200,12 @@ class MainActivity : AppCompatActivity() {
         val imageFile = File.createTempFile("lesco_snapshot_", ".jpg", cacheDir)
         cameraImageUri = FileProvider.getUriForFile(
             this,
-            "${BuildConfig.APPLICATION_ID}.fileprovider",
+            "com.lesco.supportregistration.fileprovider",
             imageFile
         )
-        cameraLauncher.launch(cameraImageUri)
+        cameraImageUri?.let { uri ->
+            cameraLauncher.launch(uri)
+        }
     }
 
     private fun setSelectedImage(uri: Uri) {
